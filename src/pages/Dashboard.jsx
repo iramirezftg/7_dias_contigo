@@ -113,7 +113,7 @@ export default function Dashboard() {
               {timeLeft?.days || 0}
             </span>
           </div>
-          <span className="text-sm text-gray-400 uppercase tracking-wider">Días para volver a verte</span>
+          <span className="text-sm text-gray-400 uppercase tracking-wider">Días para verte</span>
         </div>
 
         <div className="hidden md:block w-px h-12 bg-white/10"></div>
