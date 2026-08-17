@@ -117,18 +117,35 @@ function DayOneContent() {
 
 function DayTwoContent() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center py-12 space-y-8">
       <Heart className="w-16 h-16 text-gold-500 drop-shadow-[0_0_20px_rgba(236,170,33,0.4)]" />
       <h3 className="text-xl text-center text-white font-medium">🎧 Ponte audífonos, cierra los ojos y dale play.</h3>
       
+      <audio 
+        ref={audioRef} 
+        src="/dia2-audio.webm"
+        onEnded={() => setIsPlaying(false)}
+      />
+
       <button 
-        onClick={() => setIsPlaying(!isPlaying)}
+        onClick={togglePlay}
         className="w-24 h-24 bg-gold-500 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(236,170,33,0.3)] hover:scale-105 transition-transform"
       >
         {isPlaying ? <Pause className="w-10 h-10 text-dark-900" /> : <Play className="w-10 h-10 text-dark-900 ml-2" />}
       </button>
-      <p className="text-xs text-gray-500">(Audio placeholder - reemplaza con tu nota de voz)</p>
+      <p className="text-xs text-gold-300">Mensaje de voz de Mi Niño</p>
     </div>
   );
 }
