@@ -216,12 +216,25 @@ function DayFourContent() {
 
 function DayFiveContent() {
   return (
-    <div className="text-center py-12 space-y-6">
-      <Clock className="w-16 h-16 text-gold-500 mx-auto" />
-      <h3 className="text-2xl font-serif text-white">Hoy no hagas planes a las 10pm.</h3>
-      <p className="text-gray-300">
-        Ponte cómoda, prepara tu bebida favorita y espera mi llamada. Tenemos una cita virtual.
+    <div className="text-center py-8 space-y-6 flex flex-col items-center w-full">
+      <Music className="w-12 h-12 text-gold-500 mx-auto drop-shadow-[0_0_20px_rgba(236,170,33,0.4)]" />
+      <h3 className="text-2xl font-serif text-white">Para ti, mi niña</h3>
+      <p className="text-gray-300 italic max-w-md mx-auto text-lg leading-relaxed mb-4">
+        "Eres lo mejor que me ha pasado, espero que esta canción te haga sonreír tanto como tú lo haces conmigo."
       </p>
+      
+      <div className="w-full max-w-lg mx-auto aspect-video rounded-xl overflow-hidden shadow-[0_0_30px_rgba(236,170,33,0.2)] border border-gold-500/30 bg-black">
+        <iframe 
+          width="100%" 
+          height="100%" 
+          src="https://www.youtube.com/embed/0nMHyFVzFyE?si=EkxslVEQjQD8e5K7&autoplay=0" 
+          title="YouTube video player" 
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
   );
 }

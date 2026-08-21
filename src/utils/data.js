@@ -38,10 +38,10 @@ export const surprises = [
   },
   {
     day: 5,
-    title: "Hoy tenemos una cita",
+    title: "Quiero dedicarte esto",
     unlockAt: "2026-08-21T00:00:00",
-    type: "date",
-    description: "Reserva tu noche a las 10pm"
+    type: "youtube",
+    description: "Una canción especial para ti"
   },
   {
     day: 6,
