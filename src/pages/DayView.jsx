@@ -240,12 +240,41 @@ function DayFiveContent() {
 }
 
 function DaySixContent() {
+  const massageOptions = [
+    { name: "Sueco de Aromaterapia", desc: "Suave masaje de cuerpo completo que mejora la circulación y calma los sentidos con aceites esenciales." },
+    { name: "Piedras Calientes", desc: "Profundo masaje nutritivo caliente con movimientos circulares suaves usando piedras volcánicas." },
+    { name: "Piernas Cansadas", desc: "Alivia tensiones y revitaliza tus piernas y pies. Disfruta de una experiencia de elevación." },
+    { name: "Espalda, Cuello y Hombros", desc: "Se centra en liberar el estrés y la tensión acumulada en el cuello, hombros y espalda." }
+  ];
+
   return (
-    <div className="text-center py-12 space-y-6">
+    <div className="text-center py-8 space-y-6 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
       <Gift className="w-16 h-16 text-gold-500 mx-auto" />
-      <h3 className="text-2xl font-serif text-white">Tengo algo para ti...</h3>
+      <h3 className="text-2xl font-serif text-white">¡Vale por un masaje!</h3>
       <p className="text-gray-300 text-lg">
-        Revisa la puerta en <span className="text-gold-400 font-bold">3... 2... 1...</span>
+        Este cupón es canjeable por un masaje en <span className="text-gold-400 font-bold">Bonterra Spa</span> de Durango.
+      </p>
+      
+      <div className="text-left mt-6">
+        <p className="text-gold-300 font-medium text-center mb-4">Puedes elegir la opción que más te guste:</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {massageOptions.map((opt, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.15 }}
+              className="bg-white/5 border border-white/10 p-4 rounded-xl hover:bg-white/10 transition-colors"
+            >
+              <h4 className="text-gold-400 font-medium mb-2">{opt.name}</h4>
+              <p className="text-gray-400 text-sm leading-snug">{opt.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <p className="text-gray-400 mt-6 leading-relaxed max-w-md mx-auto pt-6 border-t border-white/10">
+        Dime qué día quieres ir a partir del 1ro de septiembre y yo me encargo de agendarlo para ti. Te lo mereces todo, mi niña hermosa.
       </p>
     </div>
   );

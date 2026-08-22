@@ -45,10 +45,10 @@ export const surprises = [
   },
   {
     day: 6,
-    title: "Tengo algo para ti",
+    title: "Un día de relajación para ti",
     unlockAt: "2026-08-22T00:00:00",
     type: "gift",
-    description: "Revisa la puerta en 3... 2... 1..."
+    description: "Cupón válido para un masaje en Bonterra Spa"
   },
   {
     day: 7,
